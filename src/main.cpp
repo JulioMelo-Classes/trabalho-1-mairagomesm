@@ -1,5 +1,6 @@
 #include <iostream>
 using std::cout;
+using std::cin;
 using std::endl;
 
 int main(int argc, char *argv[]){
@@ -12,3 +13,4 @@ int main(int argc, char *argv[]){
     cout<<"Argumento["<<i<<"]: "<<argv[i]<<endl;
   return 0;
 }
+

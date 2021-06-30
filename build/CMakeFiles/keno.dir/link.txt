@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -g -fsanitize=address CMakeFiles/keno.dir/src/main.cpp.o -o keno 

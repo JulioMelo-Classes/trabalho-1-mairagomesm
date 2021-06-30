@@ -2,8 +2,8 @@
 
 Preencha os dados abaixo para identificar a autoria do trabalho.
 
+- Nome: Tales Henrique Rocha Roque da Silva. 
+- Email: taleshrochaz@gmail.com. 
 - Nome: *\<insira seu nome aqui>*
 - Email: *\<insira seu email aqui>*
-- Turma: *\<insira sua turma aqui>*
-
-Repita os campos Nome e Email caso seja uma dupla
+- Turma: IMD0030 - LINGUAGEM DE PROGRAMAÇÃO I - T01 (2021.1).
