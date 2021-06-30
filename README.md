@@ -20,7 +20,7 @@ Repositório contendo as especificações do Trabalho 1 da disciplina de LP1
  }
  else{
      get_in(build);
-     run_command(cmake --build .);
+     run_command(make);
  }
  ```
  
