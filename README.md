@@ -1,28 +1,38 @@
 # Trabalho-1
 Repositório contendo as especificações do Trabalho 1 da disciplina de LP1
 
-## Pastas e especificações
+# Pastas e especificações
 
-- src - Contém todos os arquivos ``.cpp``.
-- include - Contém todos os arquivos ``.h``.
-- bin - Contém todos os aquivos binários (executáveis).
+- src - Contém todos os arquivos ``.cpp``;
+- include - Contém todos os arquivos ``.h``;
+- bin - Contém todos os aquivos binários (executáveis);
+- data - Contém os arquivos de aposta;
 - build - Contém os arquivos que o ``cmake`` cria.
 
-## Como compilar e executar o projeto
+# Como compilar o projeto
 
  ```cpp
- if(!pasta build){
-     Crie-a;
-     Entre nela;
-     Rode o comando: cmake ..;
-     Rode o comando: ``cmake --build;
+ if(!exists_dir(build)){
+     create_dir(build);
+     get_in(build);
+     run_command(cmake ..);
+     run_command(cmake --build .);
  }
  else{
-     Entre nela;
-     Rode o comando: cmake --build;
+     get_in(build);
+     run_command(cmake --build .);
  }
  ```
-  Após isso, você poderá executar o projeto pelo arquivo ``keno`` na pasta ``bin``.
+ 
+# Como executar o projeto
+ Após isso, você poderá executar o projeto pelo arquivo binário ``keno`` na pasta ``bin`` pelo terminal com o comando ``./keno``.
+ 
+## Como ler os arquivos de aposta
+Execute o binário ``keno`` com o arquivo de aposta logo depois dele.
+
+Exemplo:
+
+``./keno ../data/bet_12stpors.dat``.
 
 ## Documento de Especificação
 
