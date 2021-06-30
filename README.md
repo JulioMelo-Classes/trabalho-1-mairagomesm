@@ -10,8 +10,18 @@ Repositório contendo as especificações do Trabalho 1 da disciplina de LP1
 
 ## Como compilar e executar o projeto
 
- Caso a pasta ``build`` não tenha sido criada. Crie-a. Entre nela e rode o comando: ``cmake --build
- .``.
+ ```cpp
+ if(!pasta build){
+     Crie-a;
+     Entre nela;
+     Rode o comando: cmake ..;
+     Rode o comando: ``cmake --build;
+ }
+ else{
+     Entre nela;
+     Rode o comando: cmake --build;
+ }
+ ```
   Após isso, você poderá executar o projeto pelo arquivo ``keno`` na pasta ``bin``.
 
 ## Documento de Especificação
