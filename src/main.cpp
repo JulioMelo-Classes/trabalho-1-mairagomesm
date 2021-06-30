@@ -2,23 +2,34 @@
 #include <string>
 #include <fstream>
 #include "KenoBet.h"
+#include "io.h"
 #include "definitions.h"
 
 int main(int argc, char *argv[]){
 
-    for(int i=0; i<argc; i++) //Print all arguments
-        cout<<"Argumento["<<i<<"]: "<<argv[i]<<endl;
+    if(argc < 2){
+        cout << "Por favor, especifique o arquivo de apostas na hora de executar o Keno." << endl;
+        return 0;
+    }
 
     string bets;
-    float credits;
-    int rounds;
-    int spots[15];
+    cash_type credits;
+    number_type rounds;
+    set_of_numbers_type spots;
 
-    // Read from the dat file
+    // Read from the dat file.
     ifstream file(argv[1]);
 
-    while(getline(file, bets)) //Prints everything inside the dat file
-        cout << bets << endl;
+    // Convert the values of the dat file from strings to numbers.
+    getline(file, bets);
+    io::str_to_num(bets, &credits, 0);
+    cout << "credits " << credits << endl;
+    getline(file, bets);
+    io::str_to_num(bets, &rounds, 1);
+    cout << "rounds " << rounds << endl;
+    getline(file, bets);
+    //io::str_to_num(bets, &spots, i);
+    //cout << "spots " << credits << endl;
 
     file.close(); 
     return 0;

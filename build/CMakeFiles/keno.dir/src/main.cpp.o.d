@@ -134,4 +134,7 @@ CMakeFiles/keno.dir/src/main.cpp.o: \
  /usr/include/c++/11.1.0/bits/stl_vector.h \
  /usr/include/c++/11.1.0/bits/stl_bvector.h \
  /usr/include/c++/11.1.0/bits/vector.tcc \
+ /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/io.h \
+ /usr/include/c++/11.1.0/sstream /usr/include/c++/11.1.0/bits/sstream.tcc \
+ /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h
