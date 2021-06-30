@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include
 
-CXX_FLAGS = -Wall -g -fsanitize=address -std=gnu++11
+CXX_FLAGS = -Wall -g -fsanitize=address -lm -std=gnu++11
 

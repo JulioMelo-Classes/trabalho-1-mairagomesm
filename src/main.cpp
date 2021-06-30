@@ -1,11 +1,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::ifstream;
+#include "KenoBet.h"
+#include "definitions.h"
 
 int main(int argc, char *argv[]){
 
@@ -13,6 +10,9 @@ int main(int argc, char *argv[]){
         cout<<"Argumento["<<i<<"]: "<<argv[i]<<endl;
 
     string bets;
+    float credits;
+    int rounds;
+    int spots[15];
 
     // Read from the dat file
     ifstream file(argv[1]);

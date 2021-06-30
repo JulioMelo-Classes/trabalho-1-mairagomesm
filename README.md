@@ -5,9 +5,8 @@ Repositório contendo as especificações do Trabalho 1 da disciplina de LP1
 
 - src - Contém todos os arquivos ``.cpp``;
 - include - Contém todos os arquivos ``.h``;
-- bin - Contém todos os aquivos binários (executáveis);
 - data - Contém os arquivos de aposta;
-- build - Contém os arquivos que o ``cmake`` cria.
+- build - Contém o ``Makefile``, o binário ``keno*`` e todos os outros arquivos que o ``cmake`` cria.
 
 # Como compilar o projeto
 
@@ -25,7 +24,7 @@ Repositório contendo as especificações do Trabalho 1 da disciplina de LP1
  ```
  
 # Como executar o projeto
- Após isso, você poderá executar o projeto pelo arquivo binário ``keno`` na pasta ``bin`` pelo terminal com o comando ``./keno``.
+ Após isso, você poderá executar o projeto pelo arquivo binário ``keno`` na pasta ``build`` pelo terminal com o comando ``./keno``.
  
 ## Como ler os arquivos de aposta
 Execute o binário ``keno`` com o arquivo de aposta logo depois dele.

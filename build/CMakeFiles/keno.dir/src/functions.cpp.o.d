@@ -1,5 +1,5 @@
-CMakeFiles/keno.dir/src/main.cpp.o: \
- /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/src/main.cpp \
+CMakeFiles/keno.dir/src/functions.cpp.o: \
+ /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/src/functions.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11.1.0/iostream \
  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -128,10 +128,4 @@ CMakeFiles/keno.dir/src/main.cpp.o: \
  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/11.1.0/bits/fstream.tcc \
- /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/KenoBet.h \
- /usr/include/c++/11.1.0/vector \
- /usr/include/c++/11.1.0/bits/stl_uninitialized.h \
- /usr/include/c++/11.1.0/bits/stl_vector.h \
- /usr/include/c++/11.1.0/bits/stl_bvector.h \
- /usr/include/c++/11.1.0/bits/vector.tcc \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h
