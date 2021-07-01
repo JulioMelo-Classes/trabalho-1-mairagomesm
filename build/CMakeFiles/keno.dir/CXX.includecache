@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/KenoBet.h
+vector
+-
+
+../include/definitions.h
+
+../include/io.h
+string
+-
+sstream
+-
+definitions.h
+../include/definitions.h
+
+/home/runner/rascunho1/trabalho-1-mairagomesm/src/main.cpp
+iomanip
+-
+iostream
+-
+vector
+-
+string
+-
+fstream
+-
+KenoBet.h
+/home/runner/rascunho1/trabalho-1-mairagomesm/src/KenoBet.h
+io.h
+/home/runner/rascunho1/trabalho-1-mairagomesm/src/io.h
+definitions.h
+/home/runner/rascunho1/trabalho-1-mairagomesm/src/definitions.h
+

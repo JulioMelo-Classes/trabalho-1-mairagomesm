@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/keno.dir/src/main.cpp.o"
-  "CMakeFiles/keno.dir/src/main.cpp.o.d"
-  "keno"
   "keno.pdb"
+  "keno"
 )
 
 # Per-language clean rules from dependency scanning.
