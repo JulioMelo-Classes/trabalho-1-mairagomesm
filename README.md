@@ -24,14 +24,14 @@ Repositório contendo as especificações do Trabalho 1 da disciplina de LP1
  ```
  
 # Como executar o projeto
- Após isso, você poderá executar o projeto pelo arquivo binário ``keno`` na pasta ``build`` pelo terminal com o comando ``./keno``.
+ Você poderá executar o projeto pelo arquivo binário ``keno`` na pasta ``build`` pelo terminal com o comando ``./keno``.
  
 ## Como ler os arquivos de aposta
 Execute o binário ``keno`` com o arquivo de aposta logo depois dele.
 
 Exemplo:
 
-``./keno ../data/bet_12stpors.dat``.
+``./keno ../data/bet1.dat``.
 
 ## Documento de Especificação
 
