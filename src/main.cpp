@@ -1,5 +1,6 @@
 #include <iomanip>
 #include <iostream>
+#include <vector>
 #include <string>
 #include <fstream>
 #include "KenoBet.h"
@@ -22,16 +23,24 @@ int main(int argc, char *argv[]){
     ifstream file(argv[1]);
 
     // Convert the values of the dat file from strings to numbers.
-    getline(file, bets);
-    io::str_to_num(bets, &credits, 0);
-    cout << "credits " << credits << endl;
-    cout << std::setprecision(9) << credits << endl;
-    getline(file, bets);
-    io::str_to_num(bets, &rounds, 1);
-    cout << "rounds " << rounds << endl;
-    getline(file, bets);
-    //io::str_to_num(bets, &spots, 2);
-    //cout << "spots " << spots << endl;
+
+    getline(file, bets); //Get the credits string.
+    credits = io::str_to_num(bets); //Get the credits real value.
+    cout << "credits " << std::setprecision(8) << credits << endl;
+
+    getline(file, bets); //Get the rounds string.
+    rounds = (number_type)io::str_to_num(bets); //Get the rounds real value.
+
+    getline(file, bets); //Get the spots string.
+    std::string delimiter = " ";
+    size_t pos = 0;
+    std::string token;
+    while((pos = bets.find(delimiter)) != std::string::npos){
+        token = bets.substr(0, pos); //Break the string in tokens.
+        spots.push_back((number_type)io::str_to_num(token)); //Put all the tokens in the spots.
+        bets.erase(0, pos + delimiter.length());
+    }
+    spots.push_back((number_type)io::str_to_num(bets)); //Put the last value in the spots.
 
     file.close(); 
     return 0;

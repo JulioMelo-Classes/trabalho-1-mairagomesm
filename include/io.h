@@ -11,16 +11,12 @@
  * @param *num A pointer to the converted value of the credits, rounds or spots. Can be a int of
  * float.*/
 namespace io{
-    template<class number>
-    void str_to_num(string bet, number *num, int i){
-        if(i < 2){
-            stringstream ss;  
-            ss << bet;  
-            ss >> *num;  
-        }
-        else{
-            cout << "TODO" << endl;
-        }
+    float str_to_num(string bet){
+        float num;
+        stringstream ss;  
+        ss << bet;  
+        ss >> num;  
+        return num;
     }
 }
 #endif
