@@ -1,3 +1,4 @@
+#include <iomanip>
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -24,14 +25,14 @@ int main(int argc, char *argv[]){
     getline(file, bets);
     io::str_to_num(bets, &credits, 0);
     cout << "credits " << credits << endl;
+    cout << std::setprecision(9) << credits << endl;
     getline(file, bets);
     io::str_to_num(bets, &rounds, 1);
     cout << "rounds " << rounds << endl;
     getline(file, bets);
-    //io::str_to_num(bets, &spots, i);
-    //cout << "spots " << credits << endl;
+    //io::str_to_num(bets, &spots, 2);
+    //cout << "spots " << spots << endl;
 
     file.close(); 
     return 0;
 }
-

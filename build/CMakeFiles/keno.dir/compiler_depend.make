@@ -52,7 +52,7 @@ CMakeFiles/keno.dir/src/KenoBet.cpp.o: ../src/KenoBet.cpp \
 
 CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
-  /usr/include/c++/11.1.0/iostream \
+  /usr/include/c++/11.1.0/iomanip \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/os_defines.h \
   /usr/include/features.h \
@@ -62,8 +62,6 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
-  /usr/include/c++/11.1.0/ostream \
-  /usr/include/c++/11.1.0/ios \
   /usr/include/c++/11.1.0/iosfwd \
   /usr/include/c++/11.1.0/bits/stringfwd.h \
   /usr/include/c++/11.1.0/bits/memoryfwd.h \
@@ -83,58 +81,20 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/bits/types/FILE.h \
   /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/__locale_t.h \
-  /usr/include/c++/11.1.0/exception \
-  /usr/include/c++/11.1.0/bits/exception.h \
-  /usr/include/c++/11.1.0/bits/exception_ptr.h \
-  /usr/include/c++/11.1.0/bits/exception_defines.h \
-  /usr/include/c++/11.1.0/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11.1.0/typeinfo \
-  /usr/include/c++/11.1.0/bits/hash_bytes.h \
-  /usr/include/c++/11.1.0/new \
-  /usr/include/c++/11.1.0/bits/nested_exception.h \
-  /usr/include/c++/11.1.0/bits/move.h \
-  /usr/include/c++/11.1.0/type_traits \
-  /usr/include/c++/11.1.0/bits/char_traits.h \
-  /usr/include/c++/11.1.0/bits/stl_algobase.h \
-  /usr/include/c++/11.1.0/bits/functexcept.h \
-  /usr/include/c++/11.1.0/bits/cpp_type_traits.h \
-  /usr/include/c++/11.1.0/ext/type_traits.h \
-  /usr/include/c++/11.1.0/ext/numeric_traits.h \
-  /usr/include/c++/11.1.0/bits/stl_pair.h \
-  /usr/include/c++/11.1.0/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11.1.0/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11.1.0/bits/concept_check.h \
-  /usr/include/c++/11.1.0/debug/assertions.h \
-  /usr/include/c++/11.1.0/bits/stl_iterator.h \
-  /usr/include/c++/11.1.0/bits/ptr_traits.h \
-  /usr/include/c++/11.1.0/debug/debug.h \
-  /usr/include/c++/11.1.0/bits/predefined_ops.h \
-  /usr/include/c++/11.1.0/cstdint \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/bits/types.h \
-  /usr/include/bits/timesize.h \
-  /usr/include/bits/typesizes.h \
-  /usr/include/bits/time64.h \
-  /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdint-uintn.h \
-  /usr/include/c++/11.1.0/bits/localefwd.h \
-  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++locale.h \
-  /usr/include/c++/11.1.0/clocale \
-  /usr/include/locale.h \
-  /usr/include/bits/locale.h \
-  /usr/include/c++/11.1.0/cctype \
-  /usr/include/ctype.h \
-  /usr/include/bits/endian.h \
-  /usr/include/bits/endianness.h \
   /usr/include/c++/11.1.0/bits/ios_base.h \
   /usr/include/c++/11.1.0/ext/atomicity.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/gthr.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/time64.h \
   /usr/include/bits/types/time_t.h \
   /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
   /usr/include/bits/sched.h \
   /usr/include/bits/types/struct_sched_param.h \
   /usr/include/bits/cpu-set.h \
@@ -157,11 +117,43 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/bits/types/struct___jmp_buf_tag.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
   /usr/include/sys/single_threaded.h \
+  /usr/include/c++/11.1.0/bits/localefwd.h \
+  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++locale.h \
+  /usr/include/c++/11.1.0/clocale \
+  /usr/include/locale.h \
+  /usr/include/bits/locale.h \
+  /usr/include/c++/11.1.0/cctype \
+  /usr/include/ctype.h \
   /usr/include/c++/11.1.0/bits/locale_classes.h \
   /usr/include/c++/11.1.0/string \
+  /usr/include/c++/11.1.0/bits/char_traits.h \
+  /usr/include/c++/11.1.0/bits/stl_algobase.h \
+  /usr/include/c++/11.1.0/bits/functexcept.h \
+  /usr/include/c++/11.1.0/bits/exception_defines.h \
+  /usr/include/c++/11.1.0/bits/cpp_type_traits.h \
+  /usr/include/c++/11.1.0/ext/type_traits.h \
+  /usr/include/c++/11.1.0/ext/numeric_traits.h \
+  /usr/include/c++/11.1.0/bits/stl_pair.h \
+  /usr/include/c++/11.1.0/bits/move.h \
+  /usr/include/c++/11.1.0/type_traits \
+  /usr/include/c++/11.1.0/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11.1.0/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11.1.0/bits/concept_check.h \
+  /usr/include/c++/11.1.0/debug/assertions.h \
+  /usr/include/c++/11.1.0/bits/stl_iterator.h \
+  /usr/include/c++/11.1.0/bits/ptr_traits.h \
+  /usr/include/c++/11.1.0/debug/debug.h \
+  /usr/include/c++/11.1.0/bits/predefined_ops.h \
+  /usr/include/c++/11.1.0/cstdint \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/c++/11.1.0/bits/allocator.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
   /usr/include/c++/11.1.0/ext/new_allocator.h \
+  /usr/include/c++/11.1.0/new \
+  /usr/include/c++/11.1.0/bits/exception.h \
   /usr/include/c++/11.1.0/bits/ostream_insert.h \
   /usr/include/c++/11.1.0/bits/cxxabi_forced.h \
   /usr/include/c++/11.1.0/bits/stl_function.h \
@@ -204,28 +196,52 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/bits/types/error_t.h \
   /usr/include/c++/11.1.0/bits/charconv.h \
   /usr/include/c++/11.1.0/bits/functional_hash.h \
+  /usr/include/c++/11.1.0/bits/hash_bytes.h \
   /usr/include/c++/11.1.0/bits/basic_string.tcc \
   /usr/include/c++/11.1.0/bits/locale_classes.tcc \
   /usr/include/c++/11.1.0/system_error \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/11.1.0/stdexcept \
-  /usr/include/c++/11.1.0/streambuf \
-  /usr/include/c++/11.1.0/bits/streambuf.tcc \
-  /usr/include/c++/11.1.0/bits/basic_ios.h \
+  /usr/include/c++/11.1.0/exception \
+  /usr/include/c++/11.1.0/bits/exception_ptr.h \
+  /usr/include/c++/11.1.0/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11.1.0/typeinfo \
+  /usr/include/c++/11.1.0/bits/nested_exception.h \
+  /usr/include/c++/11.1.0/locale \
   /usr/include/c++/11.1.0/bits/locale_facets.h \
   /usr/include/c++/11.1.0/cwctype \
   /usr/include/wctype.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
+  /usr/include/c++/11.1.0/streambuf \
+  /usr/include/c++/11.1.0/bits/streambuf.tcc \
   /usr/include/c++/11.1.0/bits/streambuf_iterator.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
   /usr/include/c++/11.1.0/bits/locale_facets.tcc \
+  /usr/include/c++/11.1.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/11.1.0/ctime \
+  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11.1.0/bits/codecvt.h \
+  /usr/include/c++/11.1.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11.1.0/bits/locale_conv.h \
+  /usr/include/c++/11.1.0/bits/unique_ptr.h \
+  /usr/include/c++/11.1.0/utility \
+  /usr/include/c++/11.1.0/bits/stl_relops.h \
+  /usr/include/c++/11.1.0/tuple \
+  /usr/include/c++/11.1.0/array \
+  /usr/include/c++/11.1.0/bits/uses_allocator.h \
+  /usr/include/c++/11.1.0/bits/invoke.h \
+  /usr/include/c++/11.1.0/iostream \
+  /usr/include/c++/11.1.0/ostream \
+  /usr/include/c++/11.1.0/ios \
+  /usr/include/c++/11.1.0/bits/basic_ios.h \
   /usr/include/c++/11.1.0/bits/basic_ios.tcc \
   /usr/include/c++/11.1.0/bits/ostream.tcc \
   /usr/include/c++/11.1.0/istream \
   /usr/include/c++/11.1.0/bits/istream.tcc \
   /usr/include/c++/11.1.0/fstream \
-  /usr/include/c++/11.1.0/bits/codecvt.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/basic_file.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++io.h \
   /usr/include/c++/11.1.0/bits/fstream.tcc \
@@ -244,23 +260,49 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11.1.0/sstream:
 
-../include/KenoBet.h:
-
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++io.h:
 
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/basic_file.h:
 
-/usr/include/c++/11.1.0/bits/codecvt.h:
-
 /usr/include/c++/11.1.0/bits/istream.tcc:
+
+/usr/include/c++/11.1.0/ios:
+
+/usr/include/c++/11.1.0/fstream:
+
+/usr/include/c++/11.1.0/iostream:
+
+../include/KenoBet.h:
+
+/usr/include/c++/11.1.0/bits/invoke.h:
+
+/usr/include/c++/11.1.0/tuple:
 
 /usr/include/c++/11.1.0/istream:
 
-/usr/include/c++/11.1.0/bits/locale_facets.tcc:
+/usr/include/c++/11.1.0/bits/stl_relops.h:
+
+/usr/include/c++/11.1.0/bits/unique_ptr.h:
+
+/usr/include/c++/11.1.0/bits/codecvt.h:
+
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/time_members.h:
+
+/usr/include/c++/11.1.0/ctime:
+
+/usr/include/c++/11.1.0/bits/locale_facets_nonio.h:
 
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/ctype_base.h:
+
+/usr/include/c++/11.1.0/locale:
+
+/usr/include/c++/11.1.0/utility:
+
+/usr/include/c++/11.1.0/bits/cxxabi_init_exception.h:
+
+/usr/include/c++/11.1.0/bits/exception_ptr.h:
 
 /usr/include/c++/11.1.0/system_error:
 
@@ -271,6 +313,8 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/linux/errno.h:
+
+/usr/include/c++/11.1.0/array:
 
 /usr/include/errno.h:
 
@@ -284,6 +328,8 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11.1.0/cstdio:
 
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/messages_members.h:
+
 /usr/include/c++/11.1.0/bits/std_abs.h:
 
 /usr/include/alloca.h:
@@ -296,23 +342,13 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/bits/byteswap.h:
 
+/usr/include/c++/11.1.0/ostream:
+
+/usr/include/endian.h:
+
 /usr/include/bits/wctype-wchar.h:
 
 /usr/include/sys/types.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/c++/11.1.0/ext/string_conversions.h:
-
-/usr/include/c++/11.1.0/bits/basic_string.tcc:
-
-/usr/include/c++/11.1.0/bits/basic_string.h:
-
-../include/io.h:
-
-/usr/include/c++/11.1.0/backward/binders.h:
-
-/usr/include/c++/11.1.0/bits/stl_function.h:
 
 /usr/include/bits/floatn.h:
 
@@ -324,6 +360,12 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11.1.0/bits/stringfwd.h:
 
+/usr/include/c++/11.1.0/bits/locale_facets.tcc:
+
+/usr/include/c++/11.1.0/iomanip:
+
+/usr/include/c++/11.1.0/bits/functexcept.h:
+
 ../src/main.cpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stddef.h:
@@ -331,6 +373,10 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/bits/types/clockid_t.h:
 
 /usr/include/c++/11.1.0/bits/vector.tcc:
+
+/usr/include/c++/11.1.0/bits/basic_string.tcc:
+
+/usr/include/c++/11.1.0/bits/basic_string.h:
 
 /usr/include/c++/11.1.0/bits/range_access.h:
 
@@ -352,19 +398,21 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11.1.0/bits/alloc_traits.h:
 
+/usr/include/c++/11.1.0/bits/uses_allocator.h:
+
 /usr/include/c++/11.1.0/bits/stl_construct.h:
+
+/usr/include/c++/11.1.0/bits/nested_exception.h:
+
+../src/KenoBet.cpp:
 
 /usr/include/c++/11.1.0/bits/move.h:
 
-/usr/include/c++/11.1.0/fstream:
-
-/usr/include/c++/11.1.0/iostream:
+/usr/include/stdlib.h:
 
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
 
 /usr/include/c++/11.1.0/bits/memoryfwd.h:
-
-/usr/include/c++/11.1.0/bits/exception_ptr.h:
 
 /usr/include/c++/11.1.0/ext/atomicity.h:
 
@@ -374,19 +422,17 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/bits/types/wint_t.h:
 
-/usr/include/wchar.h:
+/usr/include/c++/11.1.0/typeinfo:
 
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/error_constants.h:
 
 /usr/include/locale.h:
 
-/usr/include/c++/11.1.0/typeinfo:
+/usr/include/wchar.h:
 
 /usr/include/c++/11.1.0/new:
 
 /usr/include/c++/11.1.0/ext/new_allocator.h:
-
-/usr/include/c++/11.1.0/ios:
 
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
@@ -406,6 +452,8 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++config.h:
 
+/usr/include/bits/floatn-common.h:
+
 /usr/include/bits/long-double.h:
 
 /usr/include/c++/11.1.0/bits/stl_algobase.h:
@@ -424,6 +472,8 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11.1.0/cwchar:
 
+/usr/include/libintl.h:
+
 /usr/include/c++/11.1.0/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/11.1.0/clocale:
@@ -438,29 +488,15 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11.1.0/vector:
 
-/usr/include/wctype.h:
-
-/usr/include/bits/errno.h:
-
-/usr/include/c++/11.1.0/cstdlib:
-
-/usr/include/bits/timex.h:
-
-/usr/include/c++/11.1.0/initializer_list:
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdarg.h:
 
 /usr/include/c++/11.1.0/bits/stl_uninitialized.h:
-
-/usr/include/endian.h:
-
-/usr/include/c++/11.1.0/ostream:
 
 /usr/include/c++/11.1.0/bits/exception_defines.h:
 
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/bits/time64.h:
-
-/usr/include/c++/11.1.0/bits/functexcept.h:
 
 /usr/include/c++/11.1.0/bits/stl_pair.h:
 
@@ -490,6 +526,8 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11.1.0/bits/fstream.tcc:
 
+/usr/include/c++/11.1.0/bits/locale_facets_nonio.tcc:
+
 /usr/include/bits/struct_mutex.h:
 
 /usr/include/c++/11.1.0/ext/type_traits.h:
@@ -499,10 +537,6 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11.1.0/bits/basic_ios.h:
 
 /usr/include/c++/11.1.0/bits/allocator.h:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdarg.h:
 
 /usr/include/c++/11.1.0/exception:
 
@@ -518,55 +552,21 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/bits/types/locale_t.h:
 
-../src/KenoBet.cpp:
+/usr/include/wctype.h:
 
-/usr/include/c++/11.1.0/bits/nested_exception.h:
+/usr/include/bits/errno.h:
+
+/usr/include/bits/timex.h:
+
+/usr/include/c++/11.1.0/initializer_list:
+
+/usr/include/c++/11.1.0/cstdlib:
 
 /usr/include/c++/11.1.0/bits/locale_classes.h:
 
 /usr/include/bits/types/__locale_t.h:
 
 /usr/include/sched.h:
-
-/usr/include/c++/11.1.0/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/11.1.0/bits/char_traits.h:
-
-/usr/include/bits/waitflags.h:
-
-/usr/include/ctype.h:
-
-/usr/include/c++/11.1.0/cstdint:
-
-/usr/include/bits/types.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h:
-
-/usr/include/bits/stdint-intn.h:
-
-/usr/include/stdint.h:
-
-/usr/include/bits/waitstatus.h:
-
-/usr/include/bits/timesize.h:
-
-/usr/include/bits/endian.h:
-
-/usr/include/bits/typesizes.h:
-
-/usr/include/bits/cpu-set.h:
-
-/usr/include/c++/11.1.0/cerrno:
-
-/usr/include/bits/stdint-uintn.h:
-
-/usr/include/bits/sched.h:
-
-/usr/include/c++/11.1.0/bits/localefwd.h:
-
-/usr/include/sys/single_threaded.h:
-
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++locale.h:
 
 /usr/include/c++/11.1.0/bits/cxxabi_forced.h:
 
@@ -582,7 +582,27 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/pthread.h:
 
+/usr/include/bits/types.h:
+
+/usr/include/c++/11.1.0/cstdint:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/bits/timesize.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/cpu-set.h:
+
 /usr/include/bits/types/time_t.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/c++/11.1.0/cerrno:
+
+/usr/include/bits/stdint-uintn.h:
 
 /usr/include/bits/types/struct_sched_param.h:
 
@@ -606,6 +626,8 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/bits/types/struct_itimerspec.h:
 
+/usr/include/c++/11.1.0/ext/string_conversions.h:
+
 /usr/include/c++/11.1.0/stdexcept:
 
 /usr/include/bits/pthreadtypes.h:
@@ -614,12 +636,38 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/bits/setjmp.h:
 
+/usr/include/c++/11.1.0/bits/locale_conv.h:
+
 /usr/include/bits/types/struct___jmp_buf_tag.h:
 
+/usr/include/sys/single_threaded.h:
+
+/usr/include/c++/11.1.0/bits/localefwd.h:
+
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++locale.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/ctype.h:
+
+/usr/include/c++/11.1.0/bits/char_traits.h:
+
 /usr/include/c++/11.1.0/string:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h:
+
+/usr/include/bits/stdint-intn.h:
+
+/usr/include/stdint.h:
 
 /usr/include/features.h:
 
 /usr/include/bits/endianness.h:
 
 /usr/include/c++/11.1.0/bits/ostream_insert.h:
+
+/usr/include/c++/11.1.0/bits/stl_function.h:
+
+../include/io.h:
+
+/usr/include/c++/11.1.0/backward/binders.h:
