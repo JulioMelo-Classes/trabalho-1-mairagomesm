@@ -4,7 +4,7 @@
 #include <sstream>
 #include "definitions.h"
 
-//! @brief This file contains all the functions related to the input and output of the program.
+//! @brief This file contains some random as hell funcions.
 
 /*!
  * @param bets A string that contains the credits, rounds or spots of the bets file.
@@ -17,5 +17,12 @@ namespace io{
         ss >> num;  
         return num;
     }
+
+    void prt_vec(set_of_numbers_type v){ 
+        for(auto i=0; i < (int)v.size(); i++) 
+            cout << v[i] << " "; 
+          
+        cout << endl;
+    } 
 }
 #endif

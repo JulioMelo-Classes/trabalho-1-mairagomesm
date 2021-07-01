@@ -147,7 +147,7 @@ CMakeFiles/keno.dir/src/main.cpp.o: \
  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/11.1.0/bits/fstream.tcc \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/KenoBet.h \
+ /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/io.h \
  /usr/include/c++/11.1.0/sstream /usr/include/c++/11.1.0/bits/sstream.tcc \
- /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h

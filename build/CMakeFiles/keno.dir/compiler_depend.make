@@ -202,10 +202,10 @@ CMakeFiles/keno.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++io.h \
   /usr/include/c++/11.1.0/bits/fstream.tcc \
   ../include/KenoBet.h \
+  ../include/definitions.h \
   ../include/io.h \
   /usr/include/c++/11.1.0/sstream \
   /usr/include/c++/11.1.0/bits/sstream.tcc \
-  ../include/definitions.h \
   ../include/definitions.h
 
 

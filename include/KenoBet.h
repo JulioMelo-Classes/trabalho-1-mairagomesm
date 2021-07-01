@@ -1,7 +1,9 @@
 #include <vector>
+#include "definitions.h"
 using number_type = unsigned short int; //<! data type for a keno hit.
 using cash_type = float; //<! Defines the wage type in this application.
 using set_of_numbers_type = std::vector< number_type >;
+using itr_of_num_type = set_of_numbers_type::iterator;
 
 class KenoBet {
     public:
@@ -14,7 +16,7 @@ class KenoBet {
         /*! Adds a number to the spots only if the number is not already there.
             @param spot_ The number we wish to include in the bet.
             @return T if number chosen is successfully inserted; F otherwise. */
-        bool add_number( number_type spot_ ){
+        bool add_number(number_type spot_){
             //TODO
             m_spots.push_back(spot_);
             return true;
@@ -57,6 +59,38 @@ class KenoBet {
         /*! Return a vector< spot_type > with the spots the player has picked so far.
             @return The vector< spot_type > with the player's spots picked so far. */
         set_of_numbers_type get_spots(void) const {return m_spots;}
+
+        template<class ForwardIt>
+        ForwardIt divide(ForwardIt right, ForwardIt left){ 
+            ForwardIt pivot = left;
+            ForwardIt i = right-1;   
+
+            for (ForwardIt j = right; j < left; j++){ 
+                if(*j <= *pivot){ 
+                    i++;
+                    iter_swap(i, j); 
+                } 
+            } 
+            iter_swap(i+1, left); 
+            return i+1; 
+        } 
+           
+        template<class ForwardIt>
+        void qksort(ForwardIt right, ForwardIt left){ 
+            if(right < left){ 
+                ForwardIt pivot = divide(right, left); 
+                qksort(right, pivot-1); 
+                qksort(pivot+1, left); 
+            } 
+        } 
+        
+        itr_of_num_type get_begin(void){
+            return m_spots.begin();
+        }
+
+        itr_of_num_type get_end(void){
+            return m_spots.end();
+        }
 
     private:
         cash_type m_wage = 0;             //<! The player's wage
