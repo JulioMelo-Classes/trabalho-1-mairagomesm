@@ -153,6 +153,10 @@ int main(int argc, char *argv[]){
     //Add the last string token into the bet.m_spots vector.
     bet.add_number((number_type)io::str_to_num(bets));
 
+    io::prt_vec(bet.get_spots());
+    bet.qksort(bet.get_begin(), bet.get_end()-1);
+    io::prt_vec(bet.get_spots());
+
     file.close(); //End of the bets conversion.
     return 0;
 }
