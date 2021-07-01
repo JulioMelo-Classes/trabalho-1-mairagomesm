@@ -14,34 +14,36 @@ int main(int argc, char *argv[]){
         return 0;
     }
 
+    KenoBet bet;
     string bets;
-    cash_type credits;
-    number_type rounds;
-    set_of_numbers_type spots;
 
-    // Read from the dat file.
-    ifstream file(argv[1]);
+    ifstream file(argv[1]); //Read from the dat file.
 
-    // Convert the values of the dat file from strings to numbers.
+    //Convert the values of the dat file from strings to numbers.
 
     getline(file, bets); //Get the credits string.
-    credits = io::str_to_num(bets); //Get the credits real value.
-    cout << "credits " << std::setprecision(8) << credits << endl;
+    bet.set_wage(io::str_to_num(bets));
+    cout << bet.get_wage() << endl;
 
     getline(file, bets); //Get the rounds string.
-    rounds = (number_type)io::str_to_num(bets); //Get the rounds real value.
+    bet.m_rounds = (number_type)io::str_to_num(bets);
 
     getline(file, bets); //Get the spots string.
+
     std::string delimiter = " ";
     size_t pos = 0;
     std::string token;
-    while((pos = bets.find(delimiter)) != std::string::npos){
-        token = bets.substr(0, pos); //Break the string in tokens.
-        spots.push_back((number_type)io::str_to_num(token)); //Put all the tokens in the spots.
-        bets.erase(0, pos + delimiter.length());
-    }
-    spots.push_back((number_type)io::str_to_num(bets)); //Put the last value in the spots.
 
-    file.close(); 
+    //Add all the string's tokens into the bet.m_spots vector.
+    while((pos = bets.find(delimiter)) != std::string::npos){
+        token = bets.substr(0, pos); //Break the string into tokens.
+        bet.add_number((number_type)io::str_to_num(token));
+        bets.erase(0, pos + delimiter.length()); //Erase the token from the original string.
+    }
+
+    //Add the last string token into the bet.m_spots vector.
+    bet.add_number((number_type)io::str_to_num(bets));
+
+    file.close(); //End of the bets conversion.
     return 0;
 }

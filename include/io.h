@@ -7,14 +7,13 @@
 //! @brief This file contains all the functions related to the input and output of the program.
 
 /*!
- * @param bet A string that contains the credits, rounds or spots of the bet file.
- * @param *num A pointer to the converted value of the credits, rounds or spots. Can be a int of
- * float.*/
+ * @param bets A string that contains the credits, rounds or spots of the bets file.
+ * @return num The float value of the string. */
 namespace io{
-    float str_to_num(string bet){
+    float str_to_num(string bets){
         float num;
         stringstream ss;  
-        ss << bet;  
+        ss << bets;  
         ss >> num;  
         return num;
     }
