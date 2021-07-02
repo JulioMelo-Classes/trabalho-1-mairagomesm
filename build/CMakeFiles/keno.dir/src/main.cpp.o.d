@@ -147,5 +147,11 @@ CMakeFiles/keno.dir/src/main.cpp.o: \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/KenoBet.h \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/func.h \
+ /usr/include/c++/11.1.0/algorithm \
+ /usr/include/c++/11.1.0/bits/stl_algo.h \
+ /usr/include/c++/11.1.0/bits/algorithmfwd.h \
+ /usr/include/c++/11.1.0/bits/stl_heap.h \
+ /usr/include/c++/11.1.0/bits/stl_tempbuf.h \
+ /usr/include/c++/11.1.0/bits/uniform_int_dist.h \
  /usr/include/c++/11.1.0/sstream /usr/include/c++/11.1.0/bits/sstream.tcc \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h

@@ -56,29 +56,6 @@ class KenoBet {
             @return The vector< spot_type > with the player's spots picked so far. */
         set_of_numbers_type get_spots(void) const {return m_spots;}
 
-        template<class ForwardIt>
-        ForwardIt divide(ForwardIt right, ForwardIt left){ 
-            ForwardIt pivot = left;
-            ForwardIt i = right-1;   
-
-            for (ForwardIt j = right; j < left; j++){ 
-                if(*j <= *pivot){ 
-                    i++;
-                    iter_swap(i, j); 
-                } 
-            } 
-            iter_swap(i+1, left); 
-            return i+1; 
-        } 
-           
-        template<class ForwardIt>
-        void qksort(ForwardIt right, ForwardIt left){ 
-            if(right < left){ 
-                ForwardIt pivot = divide(right, left); 
-                qksort(right, pivot-1); 
-                qksort(pivot+1, left); 
-            } 
-        } 
         
         itr_of_num_type get_begin(void){
             return m_spots.begin();

@@ -175,13 +175,12 @@ int main(int argc, char *argv[]){
     bet.add_number((number_type)func::str_to_num(bets));
 
     func::prt_vec(bet.get_spots());
-    func::qksort(bet.get_begin(), bet.get_end()-1);
+    qksort(bet.get_begin(), bet.get_end()-1);
     func::prt_vec(bet.get_spots());
 
     set_of_numbers_type random;
     set_of_numbers_type hits;
-    random.resize(20, 0);
-    func::create_random_vec(random, 0, 20);
+    func::create_random_vec(random);
     func::prt_vec(random);
     hits = bet.hits(random);
     func::prt_vec(hits);
