@@ -35,7 +35,8 @@ class KenoBet {
         /*! Determine how many spots match the hits passed as argument.
             @param hits_ List of hits randomly chosen by the computer.
             @return An vector with the list of hits. */
-        set_of_numbers_type get_hits(const set_of_numbers_type &hits_) const;
+        //set_of_numbers_type get_hits(const set_of_numbers_type &hits_) const;
+        set_of_numbers_type get_hits(set_of_numbers_type random);
 
         /*! Return a vector< spot_type > with the spots the player has picked so far.
             @return The vector< spot_type > with the player's spots picked so far. */
@@ -46,10 +47,8 @@ class KenoBet {
 
         itr_of_num_type get_end(void);
 
-        set_of_numbers_type hits(set_of_numbers_type random);
-
     private:
-        cash_type m_wage = 0;             //<! The player's wage
+        cash_type m_wage = 0;         //<! The player's wage
         set_of_numbers_type m_spots;  //<! The player's bet.
 };
 #endif

@@ -1,7 +1,9 @@
 #include "KenoBet.h"
 
 bool KenoBet::add_number(number_type spot_){
-    //TODO
+    for(int i = 0; i < (int)m_spots.size(); ++i)
+       if(m_spots[i] == spot_) return false;
+
     m_spots.push_back(spot_);
     return true;
 }
@@ -24,30 +26,18 @@ cash_type KenoBet::get_wage( void ) const {return m_wage;}
 
 size_t KenoBet::size( void ) const {return m_spots.size();}
 
-set_of_numbers_type KenoBet::get_hits(const set_of_numbers_type &hits_) const{
-    //TODO
-    return m_spots;
-}
-
-set_of_numbers_type KenoBet::get_spots(void) const {return m_spots;}
-
-itr_of_num_type KenoBet::get_begin(void){
-    return m_spots.begin();
-}
-
-itr_of_num_type KenoBet::get_end(void){
-    return m_spots.end();
-}
-
-set_of_numbers_type KenoBet::hits(set_of_numbers_type random){
+set_of_numbers_type KenoBet::get_hits(set_of_numbers_type random){
     set_of_numbers_type hits;
     for (int i = 0; i < (int)m_spots.size(); i++){
         for (int j = 0; j < (int)random.size(); j++){
-            if(m_spots[i] == random[j]){
-                //cout << m_spots[i] << endl;
-                hits.push_back(m_spots[i]);
-            }
+            if(m_spots[i] == random[j]) hits.push_back(m_spots[i]);
         }
     }
     return hits;
 }
+
+set_of_numbers_type KenoBet::get_spots(void) const {return m_spots;}
+
+itr_of_num_type KenoBet::get_begin(void){return m_spots.begin();}
+
+itr_of_num_type KenoBet::get_end(void){return m_spots.end();}
