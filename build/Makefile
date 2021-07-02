@@ -129,6 +129,54 @@ keno/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keno.dir/build.make CMakeFiles/keno.dir/build
 .PHONY : keno/fast
 
+src/KenoBet.o: src/KenoBet.cpp.o
+.PHONY : src/KenoBet.o
+
+# target to build an object file
+src/KenoBet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keno.dir/build.make CMakeFiles/keno.dir/src/KenoBet.cpp.o
+.PHONY : src/KenoBet.cpp.o
+
+src/KenoBet.i: src/KenoBet.cpp.i
+.PHONY : src/KenoBet.i
+
+# target to preprocess a source file
+src/KenoBet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keno.dir/build.make CMakeFiles/keno.dir/src/KenoBet.cpp.i
+.PHONY : src/KenoBet.cpp.i
+
+src/KenoBet.s: src/KenoBet.cpp.s
+.PHONY : src/KenoBet.s
+
+# target to generate assembly for a file
+src/KenoBet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keno.dir/build.make CMakeFiles/keno.dir/src/KenoBet.cpp.s
+.PHONY : src/KenoBet.cpp.s
+
+src/func.o: src/func.cpp.o
+.PHONY : src/func.o
+
+# target to build an object file
+src/func.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keno.dir/build.make CMakeFiles/keno.dir/src/func.cpp.o
+.PHONY : src/func.cpp.o
+
+src/func.i: src/func.cpp.i
+.PHONY : src/func.i
+
+# target to preprocess a source file
+src/func.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keno.dir/build.make CMakeFiles/keno.dir/src/func.cpp.i
+.PHONY : src/func.cpp.i
+
+src/func.s: src/func.cpp.s
+.PHONY : src/func.s
+
+# target to generate assembly for a file
+src/func.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keno.dir/build.make CMakeFiles/keno.dir/src/func.cpp.s
+.PHONY : src/func.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... keno"
+	@echo "... src/KenoBet.o"
+	@echo "... src/KenoBet.i"
+	@echo "... src/KenoBet.s"
+	@echo "... src/func.o"
+	@echo "... src/func.i"
+	@echo "... src/func.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

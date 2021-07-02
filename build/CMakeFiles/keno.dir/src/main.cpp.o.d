@@ -123,35 +123,24 @@ CMakeFiles/keno.dir/src/main.cpp.o: \
  /usr/include/c++/11.1.0/bits/locale_facets.tcc \
  /usr/include/c++/11.1.0/bits/basic_ios.tcc \
  /usr/include/c++/11.1.0/bits/ostream.tcc /usr/include/c++/11.1.0/istream \
- /usr/include/c++/11.1.0/bits/istream.tcc /usr/include/c++/11.1.0/ctime \
- /usr/include/c++/11.1.0/iomanip /usr/include/c++/11.1.0/locale \
- /usr/include/c++/11.1.0/bits/locale_facets_nonio.h \
- /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/time_members.h \
- /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/11.1.0/bits/codecvt.h \
- /usr/include/c++/11.1.0/bits/locale_facets_nonio.tcc \
- /usr/include/c++/11.1.0/bits/locale_conv.h \
- /usr/include/c++/11.1.0/bits/unique_ptr.h \
- /usr/include/c++/11.1.0/utility \
- /usr/include/c++/11.1.0/bits/stl_relops.h /usr/include/c++/11.1.0/tuple \
- /usr/include/c++/11.1.0/array \
- /usr/include/c++/11.1.0/bits/uses_allocator.h \
- /usr/include/c++/11.1.0/bits/invoke.h /usr/include/c++/11.1.0/vector \
- /usr/include/c++/11.1.0/bits/stl_uninitialized.h \
- /usr/include/c++/11.1.0/bits/stl_vector.h \
- /usr/include/c++/11.1.0/bits/stl_bvector.h \
- /usr/include/c++/11.1.0/bits/vector.tcc /usr/include/c++/11.1.0/fstream \
+ /usr/include/c++/11.1.0/bits/istream.tcc /usr/include/c++/11.1.0/fstream \
+ /usr/include/c++/11.1.0/bits/codecvt.h \
  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/11.1.0/bits/fstream.tcc \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/KenoBet.h \
+ /usr/include/c++/11.1.0/vector \
+ /usr/include/c++/11.1.0/bits/stl_uninitialized.h \
+ /usr/include/c++/11.1.0/bits/stl_vector.h \
+ /usr/include/c++/11.1.0/bits/stl_bvector.h \
+ /usr/include/c++/11.1.0/bits/vector.tcc \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h \
  /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/func.h \
- /usr/include/c++/11.1.0/algorithm \
+ /usr/include/c++/11.1.0/algorithm /usr/include/c++/11.1.0/utility \
+ /usr/include/c++/11.1.0/bits/stl_relops.h \
  /usr/include/c++/11.1.0/bits/stl_algo.h \
  /usr/include/c++/11.1.0/bits/algorithmfwd.h \
  /usr/include/c++/11.1.0/bits/stl_heap.h \
  /usr/include/c++/11.1.0/bits/stl_tempbuf.h \
  /usr/include/c++/11.1.0/bits/uniform_int_dist.h \
- /usr/include/c++/11.1.0/sstream /usr/include/c++/11.1.0/bits/sstream.tcc \
- /home/tales/Documents/2021.1/LP1/trabalho-1-mairagomesm/include/definitions.h
+ /usr/include/c++/11.1.0/sstream /usr/include/c++/11.1.0/bits/sstream.tcc
