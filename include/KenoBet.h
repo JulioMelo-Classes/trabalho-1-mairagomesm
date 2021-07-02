@@ -1,9 +1,5 @@
 #include <vector>
 #include "definitions.h"
-using number_type = unsigned short int; //<! data type for a keno hit.
-using cash_type = float; //<! Defines the wage type in this application.
-using set_of_numbers_type = std::vector< number_type >;
-using itr_of_num_type = set_of_numbers_type::iterator;
 
 class KenoBet {
     public:
@@ -90,6 +86,19 @@ class KenoBet {
 
         itr_of_num_type get_end(void){
             return m_spots.end();
+        }
+
+        set_of_numbers_type hits(set_of_numbers_type random){
+            set_of_numbers_type hits;
+            for (int i = 0; i < (int)m_spots.size(); i++){
+                for (int j = 0; j < (int)random.size(); j++){
+                    if(m_spots[i] == random[j]){
+                        cout << m_spots[i] << endl;
+                        hits.push_back(m_spots[i]);
+                    }
+                }
+            }
+            return hits;
         }
 
     private:
