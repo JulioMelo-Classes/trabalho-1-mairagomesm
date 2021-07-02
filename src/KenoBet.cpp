@@ -44,7 +44,7 @@ set_of_numbers_type KenoBet::hits(set_of_numbers_type random){
     for (int i = 0; i < (int)m_spots.size(); i++){
         for (int j = 0; j < (int)random.size(); j++){
             if(m_spots[i] == random[j]){
-                cout << m_spots[i] << endl;
+                //cout << m_spots[i] << endl;
                 hits.push_back(m_spots[i]);
             }
         }

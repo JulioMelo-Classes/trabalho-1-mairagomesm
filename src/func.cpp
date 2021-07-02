@@ -30,7 +30,7 @@ void func::prt_vec(set_of_numbers_type v){
     for(auto i=0; i < (int)v.size(); i++) 
     cout << v[i] << " "; 
 
-    cout << endl;
+    //cout << endl;
 } 
 
 template<class ForwardIt>
@@ -71,7 +71,7 @@ void func::create_random_vec(set_of_numbers_type &v, int y, int x){
     auto trash = std::unique(begin, last);
     int index = std::distance(v.begin(), trash); 
     int nice = std::distance(v.begin(), v.end()); 
-    cout << "Here" << index << " " << nice << endl;
+    //cout << "Here" << index << " " << nice << endl;
     if(index != nice){
         create_random_vec(v, index, nice);
     }

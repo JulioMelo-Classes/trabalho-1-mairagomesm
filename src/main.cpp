@@ -21,7 +21,6 @@ int main(int argc, char *argv[]){
 
     getline(file, bets); //Get the credits string.
     bet.set_wage(func::str_to_num(bets));
-    cout << bet.get_wage() << endl;
 
     getline(file, bets); //Get the rounds string.
     bet.m_rounds = (number_type)func::str_to_num(bets);
@@ -41,23 +40,42 @@ int main(int argc, char *argv[]){
 
     //Add the last string token into the bet.m_spots vector.
     bet.add_number((number_type)func::str_to_num(bets));
-
-    func::prt_vec(bet.get_spots());
-    func::qksort(bet.get_begin(), bet.get_end()-1);
-    func::prt_vec(bet.get_spots());
-
-    set_of_numbers_type random; //Defines the drawn numbers vector.
-    set_of_numbers_type match;   //Defines the matched numbers vector.
-    random.resize(20, 0);
-    func::create_random_vec(random, 0, 20);
-    func::prt_vec(random);
-    match = bet.hits(random);
-    func::prt_vec(match);
-    cout << match.size() << endl;
-    //func::prt_array(arr);
-    
     file.close(); 
     //End of the bets conversion.
+
+    func::qksort(bet.get_begin(), bet.get_end()-1);
+    int betNum = bet.get_spots().size();
+    //cout << betNum << endl;
+    set_of_numbers_type random; //Defines the drawn numbers vector.
+    random.resize(20, 0);
+    set_of_numbers_type match;   //Defines the matched numbers vector.
+
+    cout << "Você esta apostando " << betNum << " números:"<< endl << "[ ";
+    func::prt_vec(bet.get_spots());
+    cout << "]" << endl;
+
+    while(bet.m_rounds != 0){
+        cout << "Você tem " << bet.m_rounds << " rodadas" << endl;
+        func::create_random_vec(random, 0, 20);
+        cout << "Os números aleatórios são:" << endl << "[ ";
+        func::prt_vec(random);
+        cout << "]" << endl;
+
+        match = bet.hits(random);
+        cout << "Você acertou " << match.size()<< " eles são:" << endl << "[ ";
+        func::prt_vec(match);
+        cout << "]" << endl; //Don't show the numbers when you dont match any
+
+        /*
+        cout << "Vai ganhar " << arr[betNum][match.size()] << " eles são:" << endl << "[ ";
+        func::prt_vec(match);
+        cout << "]" << endl;*/
+
+        cout << endl;
+
+        bet.m_rounds--;
+    }
+
 
     cout << "FIM DO PROGRAMA" << endl;
     return 0;
