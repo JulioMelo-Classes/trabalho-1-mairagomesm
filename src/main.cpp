@@ -23,6 +23,8 @@ const cash_type arr[15][16] = {
 
 int main(int argc, char *argv[]){
 
+    cout << " batata +++++++=======
+        é legal" << endl;
     srand(time(NULL)); //Creates the seed to generate random numbers.
 
     if(argc < 2){
