@@ -1,11 +1,21 @@
 #include "func.h"
 
-cash_type func::str_to_num(string bets){
-    cash_type num;
-    stringstream ss;  
-    ss << bets;  
-    ss >> num;  
-    return num;
+bool func::str_to_num(string bets, cash_type *num){
+    //cash_type num;
+    stringstream ss(bets);  
+    //ss << bets;  
+    ss >> *num;  
+    if(ss.fail()) {
+        cout << "\033[1;31m    ERROR: EXISTEM CARACTERES ESTRANHOS NO ARQUIVO DE APOSTAS.\033[0m" << endl;
+        return false;
+    }
+    string aux;
+    ss >> aux;
+    if(!ss.fail()){
+        cout << "\033[1;31m    ERROR: EXISTEM CARACTERES ESTRANHOS NO ARQUIVO DE APOSTAS.\033[0m" << endl;
+        return false;
+    }
+    return true;
 }
 
 void func::prt_vec(set_of_numbers_type v){ 

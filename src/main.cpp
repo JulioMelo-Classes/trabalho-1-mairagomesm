@@ -41,11 +41,18 @@ int main(int argc, char *argv[]){
 
     //Start converting the values of the .dat file from strings to numbers.
 
+    cash_type dummyNum;
     getline(file, bets); //Get the credits string.
-    bet.set_wage(func::str_to_num(bets));
+    if(!func::str_to_num(bets, &dummyNum)){
+        return 0;
+    }
+    bet.set_wage(dummyNum);
 
     getline(file, bets); //Get the rounds string.
-    bet.m_rounds = (number_type)func::str_to_num(bets);
+    if(!func::str_to_num(bets, &dummyNum)){
+        return 0;
+    }
+    bet.m_rounds = (number_type)dummyNum;
 
     getline(file, bets); //Get the spots string.
 
@@ -58,25 +65,35 @@ int main(int argc, char *argv[]){
     bool notRepeted = true;
     while((pos = bets.find(delimiter)) != std::string::npos){
         token = bets.substr(0, pos); //Break the string into tokens.
-        notRepeted = bet.add_number((number_type)func::str_to_num(token));
-        betNum = bet.get_spots().size();
+        if(!func::str_to_num(token, &dummyNum)){
+            return 0;
+        }
+        notRepeted = bet.add_number((number_type)dummyNum);
         if(!notRepeted){
-            cout << "\033[1;31m    ERROR: UM OU MAIS NÚMEROS REPETIDO NO VETOR.\033[0m" << endl;
+            cout << "\033[1;31m    ERROR: UM OU MAIS NÚMEROS REPETIDOS NO VETOR.\033[0m" << endl;
             return 0;
         }
-        else if(betNum > 14){
-            cout << "\033[1;31m    ERROR: VOCÊ ESTÁ APOSTANDO MAIS DE 15 NÚMEROS.\033[0m" << endl;
-            return 0;
-        }
-        else if(betNum < 1){
-            cout << "\033[1;31m    ERROR: VOCÊ ESTÁ APOSTANDO ZERO OU MENOS NÚMEROS.\033[0m" << endl;
-            return 0;
-        }
+        betNum = bet.get_spots().size();
         bets.erase(0, pos + delimiter.length()); //Erase the token from the original string.
     }
 
     //Add the last string token into the bet.m_spots vector.
-    bet.add_number((number_type)func::str_to_num(bets));
+    if(!func::str_to_num(bets, &dummyNum)){
+        return 0;
+    }
+    notRepeted = bet.add_number((number_type)dummyNum);
+    if(!notRepeted){
+        cout << "\033[1;31m    ERROR: UM OU MAIS NÚMEROS REPETIDOS NO VETOR.\033[0m" << endl;
+        return 0;
+    }
+    else if(betNum > 14){
+        cout << "\033[1;31m    ERROR: VOCÊ ESTÁ APOSTANDO MAIS DE 15 NÚMEROS.\033[0m" << endl;
+        return 0;
+    }
+    else if(betNum == 0){
+        cout << "\033[1;31m    ERROR: VOCÊ ESTÁ APOSTANDO ZERO NÚMEROS.\033[0m" << endl;
+        return 0;
+    }
     file.close(); 
     //End of the bets conversion.
 

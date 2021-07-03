@@ -13,7 +13,7 @@ namespace func{
     /*!
     * @param bets A string that contains the credits, rounds or spots of the bets file.
     * @return num The float value of the string. */
-    cash_type str_to_num(string bets);
+    bool str_to_num(string bets, cash_type *num);
 
     void prt_vec(set_of_numbers_type v);
 
