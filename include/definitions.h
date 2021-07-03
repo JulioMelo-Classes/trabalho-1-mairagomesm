@@ -1,5 +1,6 @@
 #ifndef DEFINITIONS_H
 #define DEFINITIONS_H
+#include <iomanip>
 #include <iostream>
 #include <vector>
 using number_type = unsigned short int; //<! data type for a keno hit.
@@ -14,4 +15,5 @@ using std::ifstream;
 using std::stringstream;
 using std::vector;
 using std::iter_swap;
+using std::setprecision;
 #endif

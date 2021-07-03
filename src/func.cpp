@@ -1,7 +1,7 @@
 #include "func.h"
 
-float func::str_to_num(string bets){
-    float num;
+cash_type func::str_to_num(string bets){
+    cash_type num;
     stringstream ss;  
     ss << bets;  
     ss >> num;  

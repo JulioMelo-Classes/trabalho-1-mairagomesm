@@ -1,5 +1,7 @@
 #ifndef FUNC_H
 #define FUNC_H
+#include <typeinfo>
+#include <fstream>
 #include <algorithm>
 #include <sstream>
 #include "definitions.h"
@@ -7,10 +9,11 @@
 //! @brief This file contains some random as hell funcions.
 
 namespace func{
+
     /*!
     * @param bets A string that contains the credits, rounds or spots of the bets file.
     * @return num The float value of the string. */
-    float str_to_num(string bets);
+    cash_type str_to_num(string bets);
 
     void prt_vec(set_of_numbers_type v);
 
