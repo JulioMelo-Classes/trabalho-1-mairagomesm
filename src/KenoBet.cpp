@@ -1,6 +1,7 @@
 #include "KenoBet.h"
 
-bool KenoBet::add_number(number_type spot_){
+//Printar os erros aqui
+bool KenoBet::add_number(number_type spot_){ //Retornar false se for <= 0 ou > 80
     for(int i = 0; i < (int)m_spots.size(); ++i)
        if(m_spots[i] == spot_) return false;
 

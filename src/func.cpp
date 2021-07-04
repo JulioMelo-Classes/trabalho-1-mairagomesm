@@ -1,9 +1,7 @@
 #include "func.h"
 
 bool func::str_to_num(string bets, cash_type *num){
-    //cash_type num;
     stringstream ss(bets);  
-    //ss << bets;  
     ss >> *num;  
     if(ss.fail()) {
         cout << "\033[1;31m    ERROR: EXISTEM CARACTERES ESTRANHOS NO ARQUIVO DE APOSTAS.\033[0m" << endl;
@@ -21,8 +19,6 @@ bool func::str_to_num(string bets, cash_type *num){
 void func::prt_vec(set_of_numbers_type v){ 
     for(auto i=0; i < (int)v.size(); i++) 
     cout << v[i] << " "; 
-
-    //cout << endl;
 } 
 
 template<class ForwardIt>
@@ -50,22 +46,18 @@ void func::qksort(ForwardIt right, ForwardIt left){
 } 
 
 void func::create_random_vec(set_of_numbers_type &v, int y, int x){
-    for(int i = y; i < x; ++i){
-        //v.push_back(rand() % 81);
-        v[i] = (rand() % 81);
-        //cout << v[i] << endl;
-    }
     auto begin = v.begin();
     auto last = v.end()-1;
+    for(int i = y; i < x; ++i){
+        v[i] = (rand() % 81);
+    }
     qksort(begin, last);
     begin = v.begin();
     last = v.end();
-    auto trash = std::unique(begin, last);
-    int index = std::distance(v.begin(), trash); 
-    int nice = std::distance(v.begin(), v.end()); 
-    //cout << "Here" << index << " " << nice << endl;
-    if(index != nice){
-        create_random_vec(v, index, nice);
+    auto aux = std::unique(begin, last);
+    int auxSize = std::distance(v.begin(), aux); 
+    if(auxSize != (int)v.size()){
+        create_random_vec(v, auxSize, v.size());
     }
 }
 

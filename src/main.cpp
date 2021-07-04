@@ -25,7 +25,7 @@ int main(int argc, char *argv[]){
     {0, 0, 0, 0.5, 0.5, 1, 2, 5, 15, 50, 150, 300, 600, 1200, 2500, 10000}
     };
 
-    io::wellcome();
+    io::welcome();
 
     srand(time(NULL)); //Creates the seed to generate random numbers.
 
@@ -68,6 +68,7 @@ int main(int argc, char *argv[]){
         if(!func::str_to_num(token, &dummyNum)){
             return 0;
         }
+
         notRepeted = bet.add_number((number_type)dummyNum);
         if(!notRepeted){
             cout << "\033[1;31m    ERROR: UM OU MAIS NÚMEROS REPETIDOS NO VETOR.\033[0m" << endl;
@@ -143,23 +144,17 @@ int main(int argc, char *argv[]){
         cout << "]" << endl; //Don't show the numbers when you dont match any
 
         cash_type returnRate = arr[betNum-1][match.size()];
-        cout << "Você vai ganhar " << returnRate << "x o valor apostado" << endl; 
-        cout << "Você sai com " << perRound*returnRate << " LPcoins nessa rodada" << endl; 
+        cout << "    Você vai ganhar " << returnRate << "x o valor apostado" << endl; 
+        cout << "    Você sai com " << perRound*returnRate << " LPcoins nessa rodada" << endl; 
         bet.set_wage(initialMoney += perRound*returnRate);
         initialMoney = bet.get_wage();
-        cout << "Você tem no total " << initialMoney << " LPcoins" << endl << endl;
+        cout << "    Você tem no total " << initialMoney << " LPcoins" << endl << endl;
         cout << "\033[0m";
 
         bet.m_rounds--;
     }
 
     io::game_summary(1.054, 1.567, 1.5);
-    io::print_bar();
-    io::print_small_clover();
-    io::print_big_clover();
 
-
-
-    cout << "fim do programa :)" << endl;
     return 0;
 }
