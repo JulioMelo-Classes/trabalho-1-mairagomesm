@@ -1,11 +1,16 @@
 //! @file io.h
 #ifndef IO_H
 #define IO_H
+#include <string>
 #include <iostream>
 #include <iomanip>
 #include "definitions.h"
 
 namespace io{
+
+    /*! Prints a error message.
+        @param A string containing the error message. */
+    void error(string error);
 
     //! Prints the welcome message.
     void welcome();

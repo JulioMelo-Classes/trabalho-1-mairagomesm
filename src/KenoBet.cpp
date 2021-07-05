@@ -1,9 +1,16 @@
 #include "KenoBet.h"
 
 //Printar os erros aqui
-bool KenoBet::add_number(number_type spot_){ //Retornar false se for <= 0 ou > 80
+bool KenoBet::add_number(number_type spot_){
+    if(spot_ <= 0 or spot_ > 80){
+        error("O NÚMERO APOSTADO NÃO É ENTRE 1 E 80.");
+        return false;
+    }
     for(int i = 0; i < (int)m_spots.size(); ++i)
-       if(m_spots[i] == spot_) return false;
+       if(m_spots[i] == spot_){
+           error("UM OU MAIS NÚMEROS REPETIDOS NO VETOR.");
+           return false;
+       }
 
     m_spots.push_back(spot_);
     return true;

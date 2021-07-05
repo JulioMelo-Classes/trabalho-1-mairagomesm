@@ -1,11 +1,13 @@
 //! @file func.h
 #ifndef FUNC_H
 #define FUNC_H
+#include "io.h"
 #include <typeinfo>
 #include <fstream>
 #include <algorithm>
 #include <sstream>
 #include "definitions.h"
+using io::error;
 
 //! @brief This file contains some random as hell funcions.
 

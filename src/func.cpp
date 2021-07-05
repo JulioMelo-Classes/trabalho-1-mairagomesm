@@ -4,13 +4,13 @@ bool func::str_to_num(string bets, cash_type *num){
     stringstream ss(bets);  
     ss >> *num;  
     if(ss.fail()) {
-        cout << "\033[1;31m    ERROR: EXISTEM CARACTERES ESTRANHOS NO ARQUIVO DE APOSTAS.\033[0m" << endl;
+        error("EXISTEM CARACTERES ESTRANHOS NO ARQUIVO DE APOSTAS.");
         return false;
     }
     string aux;
     ss >> aux;
     if(!ss.fail()){
-        cout << "\033[1;31m    ERROR: EXISTEM CARACTERES ESTRANHOS NO ARQUIVO DE APOSTAS.\033[0m" << endl;
+        error("EXISTEM CARACTERES ESTRANHOS NO ARQUIVO DE APOSTAS.");
         return false;
     }
     return true;
@@ -18,7 +18,7 @@ bool func::str_to_num(string bets, cash_type *num){
 
 void func::prt_vec(set_of_numbers_type v){ 
     for(auto i=0; i < (int)v.size(); i++) 
-    cout << v[i] << " "; 
+    cout << "\033[1;33m" << v[i] << " \033[0m"; 
 } 
 
 template<class ForwardIt>

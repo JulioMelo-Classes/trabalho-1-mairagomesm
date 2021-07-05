@@ -1,7 +1,11 @@
 #include "io.h"
 
+void io::error(string error){
+    cout << "\033[1;31m    ERROR: " << error << "\033[0m" << endl;
+}
+
 void io::welcome(){
-    cout << "\033[1;32m";
+    cout << "\033[1;34m";
     cout << R"(
                                 ██╗  ██╗███████╗███╗   ██╗ ██████╗                             
                                 ██║ ██╔╝██╔════╝████╗  ██║██╔═══██╗                            
@@ -10,40 +14,34 @@ void io::welcome(){
                                 ██║  ██╗███████╗██║ ╚████║╚██████╔╝                            
                                 ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝                             
     )";
-    cout << "\033[0m";
     print_big_clover();
 }
 
 void io::print_bar(){
-    cout << "\033[1;34m";
-    cout << R"(
-    ==================================================)" << endl;
-    cout << "\033[0m";
+    cout << "\033[1;34m\n\n======================================\n\n";
 }
 
 void io::print_small_clover(){
     
     cout << "\033[1;32m";
     cout << R"(
-    .-.-.
+     .-.-.
     (_\|/_)
     ( /|\ )       __
-    '-'-'`-.__.-'  `-
+     '-'-'`-.__.-'  `-
     )" << endl;
     cout << "\033[0m";
 }
 
 void io::print_big_clover(){
-    cout << "\033[1;32m";
+    cout << "\033[1;34m";
     cout << R"(
                                              .'`'.'`'.
                                          .''.`.  :  .`.''.
                                          '.    '. .'    .'
                                          .```  .' '.  ```.
                                          '..',`  :  `,'..'
-                                              `-'`'-`))
-                                                     ((    
-                                                      \|
+                                              `-'`'-`
     )" << endl;
     cout << "\033[0m";
 
@@ -92,15 +90,19 @@ void io::help(){
 
 void io::game_summary(cash_type initialMoney, cash_type profit, cash_type finalMoney){
     io::print_bar();
-    cout << "\033[1;34m";
-    cout << R"(
-    Resumo do jogo :
-    Você começou o jogo com <)" << setprecision(3) << initialMoney << R"(>
-    Você obteve  <)" << setprecision(3) << profit << R"(>
-    E seu crédito final é : <)" << setprecision(3) << finalMoney << ">" << endl << endl;
+    cout << "\033[1;34mResumo do jogo:\nVocê começou o jogo com " << initialMoney << " LPcoins\n"
+    "Você obteve ";
+    if(profit > 0){
+        cout << "\033[1;32m" << profit << "\033[1;34m" << " LPcoins\n"
+        "\033[1;34mE seu crédito final é de " << "\033[1;32m" << finalMoney << "\033[1;34m LPcoins";
+    }
+    else{ 
+        cout << "\033[1;31m" << profit << "\033[1;34m" << " LPcoins\n"
+        "\033[1;34mE seu crédito final é de " << "\033[1;31m" << finalMoney << "\033[1;34m LPcoins";
+    }
 
     io::print_bar();
-    cout << "\033[1;32m";
+    cout << "\033[1;34m";
     cout << R"(
                     ███████╗██╗███╗   ███╗    ██████╗ ███████╗         ██╗ ██████╗  ██████╗  ██████╗ 
                     ██╔════╝██║████╗ ████║    ██╔══██╗██╔════╝         ██║██╔═══██╗██╔════╝ ██╔═══██╗
@@ -109,5 +111,4 @@ void io::game_summary(cash_type initialMoney, cash_type profit, cash_type finalM
                     ██║     ██║██║ ╚═╝ ██║    ██████╔╝███████╗    ╚█████╔╝╚██████╔╝╚██████╔╝╚██████╔╝
                     ╚═╝     ╚═╝╚═╝     ╚═╝    ╚═════╝ ╚══════╝     ╚════╝  ╚═════╝  ╚═════╝  ╚═════╝ 
     )" << endl;
-    cout << "\033[0m";
 }

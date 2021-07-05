@@ -2,7 +2,9 @@
 #ifndef KENOBET_H
 #define KENOBET_H
 #include <vector>
+#include "io.h"
 #include "definitions.h"
+using io::error;
 
 class KenoBet {
     public:
