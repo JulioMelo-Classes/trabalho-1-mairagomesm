@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstring>
 #include "io.h"
 #include "KenoBet.h"
 #include "func.h"
@@ -35,6 +36,11 @@ int main(int argc, char *argv[]){
 
     if(argc < 2){ //See if the .dat file was not specified.
         error("SEM ARQUIVO DE APOSTAS.");
+        cout << "\033[1;34mPara ter ajuda digite ./keno --help\n";
+        return 0;
+    }
+    if(!strcmp(argv[1], "--help")){
+        io::help();
         return 0;
     }
 
@@ -123,7 +129,7 @@ int main(int argc, char *argv[]){
         gameMoney -= perRound;
         create_random_vec(random, 0, 20);
         print_bar();
-        cout << "\033[1;34mRodada " << round << "\nOs números aleatórios são:\n[ ";
+        cout << "\033[1;34mRodada " << round << "\nOs números sorteados são:\n[ ";
         prt_vec(random); cout << "\033[1;34m]\n";
 
         match = bet.get_hits(random);
