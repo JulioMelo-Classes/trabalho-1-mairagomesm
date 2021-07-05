@@ -129,7 +129,8 @@ int main(int argc, char *argv[]){
         gameMoney -= perRound;
         create_random_vec(random, 0, 20);
         print_bar();
-        cout << "\033[1;34mRodada " << round << "\nOs números sorteados são:\n[ ";
+        cout << "\033[1;33mRODADA " << round << endl;
+        cout << "\033[1;34mOs números sorteados são:\n[ ";
         prt_vec(random); cout << "\033[1;34m]\n";
 
         match = bet.get_hits(random);

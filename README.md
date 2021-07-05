@@ -10,7 +10,7 @@ Repositório contendo as especificações do Trabalho 1 da disciplina de LP1
 
 # Como compilar o projeto
   Caso a pasta ``build`` ainda não exista. Crie-a, entre nela e execute os comandos ``cmake ..`` e
-  ``cmake --build``.
+  ``cmake --build .``.
   Caso já exista, é só entrar nela e executar o comando ``make``.
 
  ```cpp
