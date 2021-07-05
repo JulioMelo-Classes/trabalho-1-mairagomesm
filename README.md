@@ -9,6 +9,9 @@ Repositório contendo as especificações do Trabalho 1 da disciplina de LP1
 - build - Contém o ``Makefile``, o binário ``keno*`` e todos os outros arquivos que o ``cmake`` cria.
 
 # Como compilar o projeto
+  Caso a pasta ``build`` ainda não exista. Crie-a, entre nela e execute os comandos ``cmake ..`` e
+  ``cmake --build``.
+  Caso já exista, é só entrar nela e executar o comando ``make``.
 
  ```cpp
  if(!exists_dir(build)){
@@ -32,6 +35,9 @@ Execute o binário ``keno`` com o arquivo de aposta logo depois dele.
 Exemplo:
 
 ``./keno ../data/bet1.dat``.
+
+## Como ter ajuda
+  É só executar o comando ``./keno --help`` dentro da pasta build.
 
 ## Documento de Especificação
 

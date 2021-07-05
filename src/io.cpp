@@ -49,42 +49,34 @@ void io::print_big_clover(){
 
 void io::help(){
     cout << "\033[1;34m";
-    cout << R"(
-    O que é o Keno ? 
-    ==================================================
-        Assim como loteria ou bingo, você irá escolher
-    um valor financeiro,rodadas e um conjunto de 
-    números e caso esses sejam sorteados, você 
-    receberá um valor que poderá crescer o valor 
-    inicial. Quanto mais sorte, mais dinheiro você 
-    ganha.
+    cout << " O que é o Keno?";
+    io::print_bar();
+    cout << " Assim como loteria ou bingo, você irá escolher um\n"
+    "valor financeiro,rodadas e um conjunto de números e\n"
+    "caso esses sejam sorteados, você receberá um valor que\n"
+    "poderá crescer o valor inicial. Quanto mais sorte, mais\n"
+    "dinheiro você ganha.";
+    io::print_bar();
 
-    ==================================================
+    cout << " O jogo Keno funciona da seguinte maneira:\n"
+    "Você vai precisar pensar em 3 valores:\n"
+    "- O valor inicial que você quer apostar;\n"
+    "- O número de rodadas que você quer jogador;\n"
+    "- Um conjunto de elementos de 1 a 15, que vão do número 1 a 80.";
+    io::print_bar();
 
-    O jogo Keno funciona da seguinte maneira:
+    cout << " Monte seu arquivo .dat seguindo as especificações:\n"
+            "Valor do crédito inicial\n"
+            "Numero de rodadas\n"
+            "conjunto de até 15 números inteiros\n"
+            "----------------------------\n"
+            "exemplo:\n"
+             "500\n"
+             "3\n"
+             "1 4 34 7 32 71";
+    io::print_bar();
 
-    Você vai precisar pensar em 3 valores :
-    - O valor inicial que você quer apostar
-    - O número de rodadas que você quer jogador
-    - Um conjunto de elementos de 1 a 15, que vão do número 1 a 80.
-
-    ==================================================
-
-    Monte seu arquivo .dat seguindo as especificações :
-
-            Valor do crédito inicial
-            Numero de rodadas
-            conjunto de até 15 números inteiros
-            ----------------------------
-            exemplo:
-
-             500
-             3
-             1 4 34 7 32 71 
-
-    ==================================================
-
-    Escolha seus valores, insira o arquivo seguindo as recomendações acima, e boa sorte!)" << endl;
+    cout << " Escolha seus valores, insira o arquivo seguindo as recomendações acima, e boa sorte!\n";
     cout << "\033[0m";
 }
 

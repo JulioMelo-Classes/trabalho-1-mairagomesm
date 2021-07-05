@@ -35,10 +35,10 @@ int main(int argc, char *argv[]){
     srand(time(NULL)); //Creates the seed to generate random numbers.
 
     if(argc < 2){ //See if the .dat file was not specified.
-        error("SEM ARQUIVO DE APOSTAS.");
-        cout << "\033[1;34mPara ter ajuda digite ./keno --help\n";
+        error("SEM ARQUIVO DE APOSTAS. PARA TER AJUDA DIGITE ./KENO --HELP");
         return 0;
     }
+
     if(!strcmp(argv[1], "--help")){
         io::help();
         return 0;
