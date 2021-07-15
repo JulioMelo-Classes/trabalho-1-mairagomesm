@@ -11,6 +11,25 @@ using func::prt_vec;
 using func::create_random_vec;
 using io::print_bar;
 
+/*
+Avaliação
+Processamento do Arquivo de Entrada: 1
+Execução correta: 1
+Interfcace Textual: 1
+Documentação: 1
+Compilação automatizada: 1
+Organização em src, include, build, data: 1
+
+Comentários
+- A organização ficou muito boa! No entanto, ao invés de apenas usar namespaces sugiro vocês tentarem usar
+algumas classes a mais na proxima vez. Por exemplo, o namespace io, poderia ser transformado na classe KenoInterface
+que imprime os textos relativos à interface textual mediante o fornecimento de uma instancia da classe KenoBet.
+- O mesmo (criação de outra classe) poderia ser feito para a parte de processamento do arquivo de apostas
+- Lembre que você não precisa dessas diretivas "using ..." nos arquivos .cpp, pode apenas colocar using namespace <nome>.
+No entanto, nos .h é o contrário. Nos arquivos .h a má prática é quando esses comandos. Nos .h sempre usamos o nome "fully qualified"
+das classes/objetos tipo std::string, std::vector, io::print_bar, etc.
+*/
+
 int main(int argc, char *argv[]){
     const cash_type arr[15][16] = {
     {0, 3},
